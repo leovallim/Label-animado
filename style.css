@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    min-height: 100vh;
+
+    font-family: sans-serif;
+}
+.field__group{
+    position: relative;
+}
+.field{
+    padding:5px 10px;
+    width:300px;
+    border:0;
+    border-bottom: 1px solid black;
+    transition: ease-in 0.15s all;
+    outline: none;
+
+    font-size: 1.12rem;
+}
+.label{
+    position: absolute;
+    top:0;
+    left:0;
+    pointer-events: none;
+    transition: all ease-in 0.15s;
+
+    font-size: 1rem;
+}
+
+.field:focus,
+.field--text{
+    border-bottom: 2px solid red;
+}
+.field:focus + .label,
+.field--text + label{
+    color:red;
+    top:-50%;
+
+    font-size: 0.7rem;;
+}
